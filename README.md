@@ -3,6 +3,20 @@ Jittor Implementation of the DAI-NET Model
 
 ## 环境配置
 
+#### 最终配置
+
+WSL Ubuntu 22.04.5 LTS
+
+Python 3.8.20
+
+jittor 1.3.10.0
+
+cuda 11.5
+
+#### 配置过程
+
+
+
 ## 数据准备脚本
 ```python
 class WIDERDetection(Dataset):
