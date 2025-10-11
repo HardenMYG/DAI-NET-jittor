@@ -1,9 +1,9 @@
 # DAI-NET-jittor
 Jittor Implementation of the DAI-NET Model
 
-## 环境配置
+# 环境配置
 
-#### 最终配置
+### 最终配置
 
 WSL Ubuntu 22.04.5 LTS
 
@@ -13,11 +13,11 @@ jittor 1.3.10.0
 
 cuda 11.5
 
-#### 配置过程
+### 配置过程
 
 
 
-## 数据准备脚本
+# 数据准备脚本
 ```python
 class WIDERDetection(Dataset):
     """WIDER Face 数据集的 Jittor 实现"""
@@ -119,7 +119,7 @@ class WIDERDetection(Dataset):
         return images, targets, paths
 ```
 
-## 训练脚本
+# 训练脚本
 
 ```python
 save_folder = os.path.join(args.save_folder, 'dark')
@@ -376,7 +376,7 @@ def adjust_learning_rate(optimizer, gamma, step):
         param_group['lr'] = param_group['lr'] * gamma
 ```
 
-## 测试脚本
+# 测试脚本
 
 ```python
 def tensor_to_image(tensor):
@@ -558,7 +558,7 @@ def load_models():
     return net
 ```
 
-## 训练日志
+# 训练日志
 
 ### jittor
 
@@ -581,7 +581,7 @@ def load_models():
 <img width="1844" height="1273" alt="Screenshot 2025-10-11 203728" src="https://github.com/user-attachments/assets/b769fa4a-c96d-47a7-b697-eb17f47bf8cd" />
 
 
-## 模型效果
+# 模型效果
 
 ### 原图
 <img width="1080" height="720" alt="image" src="https://github.com/user-attachments/assets/b9b4dce1-64a3-47d5-95f1-8d4ff7a75626" />
@@ -593,7 +593,7 @@ def load_models():
 <img width="2130" height="1422" alt="Screenshot 2025-10-08 133732" src="https://github.com/user-attachments/assets/c68cc0e9-81ef-431b-aff2-b13ecb019594" />
 
 
-## 其他说明
+# 其他说明
 
 ### 代码参考
 本代码参照论文[《Boosting Object Detection with Zero-Shot Day-Night Domain Adaptation》](https://zpdu.github.io/DAINet_page/)及其[代码](https://github.com/ZPDu/DAI-Net)进行jittor版本代码实现。
