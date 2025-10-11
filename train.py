@@ -63,10 +63,6 @@ train_set = parser.add_mutually_exclusive_group()
 parser.add_argument('--batch_size',
                     default=1, type=int,
                     help='Batch size for training')
-parser.add_argument('--model',
-                    default='dark', type=str,
-                    choices=['dark', 'vgg', 'resnet50', 'resnet101', 'resnet152'],
-                    help='model for training')
 parser.add_argument('--resume',
                     default=None, type=str,
                     help='Checkpoint state_dict file to resume training from')
@@ -92,7 +88,7 @@ parser.add_argument('--save_folder',
 args = parser.parse_args()
 
 
-save_folder = os.path.join(args.save_folder, args.model)
+save_folder = os.path.join(args.save_folder, 'dark')
 if not os.path.exists(save_folder):
     os.makedirs(save_folder)
 
@@ -155,8 +151,8 @@ def train():
 
     csv_file = os.path.join(save_folder, 'training_log.csv')
 
-    basenet = basenet_factory(args.model)
-    dsfd_net = build_net('train', cfg.NUM_CLASSES, args.model)
+    basenet = basenet_factory()
+    dsfd_net = build_net('train', cfg.NUM_CLASSES)
     net = dsfd_net
     net_enh = RetinexNet()
     net_enh.load_state_dict(jt.load(args.save_folder + 'decomp.pth'))
