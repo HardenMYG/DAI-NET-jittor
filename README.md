@@ -605,7 +605,8 @@ def load_models():
 
 论文中的Zero-shot Adaptation版本的DAI-NET(DarkFaceZSDA.pth)
 
-<img width="2131" height="1422" alt="image" src="https://github.com/user-attachments/assets/6f7d7a51-c45a-42fb-ac8b-a87a356a4253" />
+<img width="2139" height="1420" alt="image" src="https://github.com/user-attachments/assets/27d9a00e-b74c-43d9-bc9c-234e33f23954" />
+
 
 
 # 其他说明
