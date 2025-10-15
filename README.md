@@ -15,6 +15,27 @@ cuda 11.5
 
 ### 配置过程
 
+初始在windows环境下配置，但遇到了很多困难。
+
+1. 运行Var样例代码时，出现多行 error C2440: 'type cast': cannot convert from 'void (__cdecl jittor::Node::* )(void)' to 'void (__cdecl * )(jittor::Node * )'。
+这句话是说在jittor::Node的成员函数指针的转换上。错误信息显示它试图将一个成员函数指针 (void (__cdecl jittor::Node::* )(void)) 转换为一个普通函数指针类型 (void (__cdecl *)(jittor::Node *))，这种转换是非法的。
+具体来说，错误 C2440 说明在类型转换时无法自动将成员函数指针转换为普通函数指针。在C++中，成员函数指针和普通函数指针有不同的内部表示，因此不能直接转换。
+
+于是放弃在windows下配置jittor，转而在wsl上进行。
+
+2. python=3.8   version `GLIBCXX_3.4.30' not found 
+
+ImportError: /home/my/anaconda3/envs/JITTOR-c/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by /lib/x86_64-linux-gnu/libLLVM-15.so.1)
+
+查询解决方案：
+
+检查是否存在strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX，确实存在。
+
+使用如下指令进行软连接解决`GLIBCXX_3.4.30' not found问题。
+
+cd /home/my/anaconda3/envs/DAINet-jittor/bin/../lib/
+mv libstdc++.so.6 libstdc++.so.6.old
+ln -s /usr/lib/x86_64-linux-gnu/libstdc++.so.6 libstdc++.so.6
 
 
 # 数据准备脚本
