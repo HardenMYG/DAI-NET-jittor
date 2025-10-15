@@ -587,10 +587,25 @@ def load_models():
 <img width="1080" height="720" alt="image" src="https://github.com/user-attachments/assets/b9b4dce1-64a3-47d5-95f1-8d4ff7a75626" />
 
 ### 检测结果
+
+我的模型
+
 <img width="1080" height="720" alt="image" src="https://github.com/user-attachments/assets/a00b2e65-5ce4-41da-9194-f593ba5885df" />
 
+论文中的Zero-shot Adaptation版本的DAI-NET(DarkFaceZSDA.pth)
+
+<img width="1080" height="720" alt="image" src="https://github.com/user-attachments/assets/e66a1e5c-7751-4000-bfda-b6eec87707cc" />
+
+
 ### 特征图
+
+我的模型
+
 <img width="2130" height="1422" alt="Screenshot 2025-10-08 133732" src="https://github.com/user-attachments/assets/c68cc0e9-81ef-431b-aff2-b13ecb019594" />
+
+论文中的Zero-shot Adaptation版本的DAI-NET(DarkFaceZSDA.pth)
+
+<img width="2131" height="1422" alt="image" src="https://github.com/user-attachments/assets/6f7d7a51-c45a-42fb-ac8b-a87a356a4253" />
 
 
 # 其他说明
